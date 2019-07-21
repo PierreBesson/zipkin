@@ -48,7 +48,7 @@
 
     <main.basedir>${project.basedir}</main.basedir>
 
-    <armeria.version>0.88.0</armeria.version>
+    <armeria.version>zipkin-SNAPSHOT</armeria.version>
     <!-- This should only be used in tests, and be careful to avoid >= v20 apis -->
     <guava.version>28.0-jre</guava.version>
 
@@ -150,6 +150,14 @@
     <url>https://github.com/openzipkin/zipkin/issues</url>
   </issueManagement>
 
+  <!-- temporary until armeria 0.89 -->
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -165,12 +173,12 @@
       </dependency>
 
       <dependency>
-        <groupId>com.linecorp.armeria</groupId>
+        <groupId>com.github.kojilin.armeria</groupId>
         <artifactId>armeria-spring-boot-autoconfigure</artifactId>
         <version>${armeria.version}</version>
         <exclusions>
           <exclusion>
-            <groupId>com.linecorp.armeria</groupId>
+            <groupId>com.github.kojilin.armeria</groupId>
             <artifactId>armeria-logback</artifactId>
           </exclusion>
           <exclusion>
@@ -181,7 +189,7 @@
       </dependency>
 
       <dependency>
-        <groupId>com.linecorp.armeria</groupId>
+        <groupId>com.github.kojilin.armeria</groupId>
         <artifactId>armeria-tomcat</artifactId>
         <version>${armeria.version}</version>
       </dependency>

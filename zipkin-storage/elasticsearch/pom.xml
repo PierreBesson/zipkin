@@ -35,7 +35,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.linecorp.armeria</groupId>
+      <groupId>com.github.kojilin.armeria</groupId>
       <artifactId>armeria</artifactId>
       <version>${armeria.version}</version>
     </dependency>
@@ -64,7 +64,7 @@
     </dependency>
 
     <dependency>
-      <groupId>com.linecorp.armeria</groupId>
+      <groupId>com.github.kojilin.armeria</groupId>
       <artifactId>armeria-testing-junit4</artifactId>
       <version>${armeria.version}</version>
       <scope>test</scope>
